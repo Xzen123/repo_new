@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -63,6 +63,8 @@ const FilterBadge = ({ label, count, color, active, onClick }) => (
 function MapView({ height }) {
     const [observations, setObservations] = useState([]);
     const [activeFilter, setActiveFilter] = useState('all');
+    const [selectedObs, setSelectedObs] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchObservations = async () => {

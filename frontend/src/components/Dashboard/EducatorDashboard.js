@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './Dashboard.css';
 
 const EducatorDashboard = () => {
-    const [activities] = useState([
+    const [activities, setActivities] = useState([
         {
             id: 1,
             title: "Local Water Health",
@@ -21,6 +22,9 @@ const EducatorDashboard = () => {
             status: "Coming Soon"
         }
     ]);
+
+    const [datasets, setDatasets] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     // Fetch real datasets (mocked for now or strictly real observations)
     const handleDownloadData = async () => {
