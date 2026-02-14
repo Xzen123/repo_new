@@ -117,9 +117,9 @@ const LandingPage = () => {
                 </div>
                 <div className="footer-links">
                     <span>© 2025 CitSciNet</span>
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Contact</a>
+                    <a href="javascript:void(0)">Privacy</a>
+                    <a href="javascript:void(0)">Terms</a>
+                    <a href="javascript:void(0)">Contact</a>
                 </div>
             </footer>
         </div>

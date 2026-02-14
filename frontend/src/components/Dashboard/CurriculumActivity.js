@@ -111,7 +111,7 @@ const CurriculumActivity = () => {
                             <ul style={{ listStyle: 'none', padding: 0 }}>
                                 {activity.resources?.map((res, i) => (
                                     <li key={i} style={{ marginBottom: '10px' }}>
-                                        <a href="#" onClick={(e) => e.preventDefault()} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'var(--primary)' }}>
+                                        <a href="javascript:void(0)" onClick={(e) => e.preventDefault()} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'var(--primary)' }}>
                                             <span style={{ marginRight: '8px' }}>{res.type === 'video' ? '📺' : '📄'}</span>
                                             {res.title}
                                         </a>
